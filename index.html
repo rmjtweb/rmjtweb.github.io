@@ -832,6 +832,40 @@ word-wrap:break-word'>
 <o:p></o:p></span></p>
 
 <p class=MsoPlainText><span style='font-family:"Courier New"'>## <o:p></o:p></span></p>
+<!-- Description: A Javascript to display the date.
+Browsers: All
+Server requirements:N/A
+Additional Information: 
+Note: paste this code into the page where you want to display the date.  -->
+
+<h4>It is now  
+<script type="text/javascript">
+<!--
+var currentTime = new Date()
+var month = currentTime.getMonth() + 1
+var day = currentTime.getDate()
+var year = currentTime.getFullYear()
+var hours = currentTime.getHours()
+var minutes = currentTime.getMinutes()
+var ampm = ""
+
+if (minutes < 10){
+minutes = "0" + minutes
+}
+
+if(hours > 12){
+ampm = "PM"
+hours = hours - 12
+} else {
+ampm = "AM"
+}
+document.write(month + "/" + day + "/" + year + "  " + hours + ":" + minutes + " " + ampm)
+
+//-->
+</script>
+</h4>
+
+
 
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
